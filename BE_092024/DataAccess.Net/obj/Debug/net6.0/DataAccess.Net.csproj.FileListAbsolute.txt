@@ -1,0 +1,12 @@
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\bin\Debug\net6.0\DataAccess.Net.deps.json
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\bin\Debug\net6.0\DataAccess.Net.dll
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\bin\Debug\net6.0\DataAccess.Net.pdb
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.csproj.AssemblyReference.cache
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.AssemblyInfoInputs.cache
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.AssemblyInfo.cs
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.csproj.CoreCompileInputs.cache
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.dll
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\refint\DataAccess.Net.dll
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.pdb
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\ref\DataAccess.Net.dll
