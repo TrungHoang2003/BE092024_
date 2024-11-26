@@ -3,24 +3,14 @@ using DataAccess.Net.DAL;
 using DataAccess.Net.DataObject;
 using OfficeOpenXml;
 using OfficeOpenXml;
+using System.Collections.Generic;
 
 
 namespace DataAccess.Net.DALImpl;
 
 public class ProductRepository:IProductRepository
 {
-    private readonly List<Product> _products;
-
-    public ProductRepository(List<Product> products)
-    {
-        products.Add(new Product() {Id = 1, Name = "Dell", Price = 1000000, Category = "Laptop"}
-        );
-        products.Add(new Product() {Id = 2, Name = "Iphone13", Price = 100000,Category = "Phone"}
-        );
-        products.Add(new Product() {Id = 3, Name = "G-Shock", Price = 10000, Category = "Watch"}
-        );
-        _products = products;
-    }
+    private readonly List<Product> _products = new List<Product>();
 
     public void addProduct(Product product)
     {
@@ -92,7 +82,9 @@ public class ProductRepository:IProductRepository
 
     public IEnumerable<Product> searchProduct(string productName, string category)
     {
-        return _products.Where(p => p.Name.Contains(productName) 
+        return _products.Where(p => p.Name != null
+                                    && p.Name.Contains(productName)
+                                    && p.Category != null
                                     && p.Category.Contains(category));
     }
 

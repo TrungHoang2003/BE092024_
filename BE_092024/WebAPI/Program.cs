@@ -1,6 +1,7 @@
 using DataAccess.Net.DAL;
 using DataAccess.Net.DALImpl;
 using DataAccess.Net.DataObject;
+using System.Collections.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,6 @@ builder.Services.AddSwaggerGen();
 
 //Dang ky DI
 builder.Services.AddSingleton<IProductRepository, ProductRepository>();
-builder.Services.AddSingleton(new List<Product>());
 
 var app = builder.Build();
 
