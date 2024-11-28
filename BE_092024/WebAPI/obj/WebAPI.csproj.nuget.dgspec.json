@@ -4,14 +4,14 @@
     "C:\\Users\\trung\\RiderProjects\\BE_092024\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\DataAccess.Net.csproj": {
+    "C:\\Users\\trung\\RiderProjects\\BE_092024\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\DataAccess.Net.csproj",
-        "projectName": "DataAccess.Net",
-        "projectPath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\DataAccess.Net.csproj",
+        "projectUniqueName": "C:\\Users\\trung\\RiderProjects\\BE_092024\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\obj\\",
+        "outputPath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
@@ -42,9 +42,94 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\DataAccess.Net.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\DataAccess.Net.csproj",
+        "projectName": "DataAccess.Net",
+        "projectPath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\DataAccess.Net.csproj",
+        "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\trung\\RiderProjects\\BE_092024\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\Common\\Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
             "EPPlus": {
               "target": "Package",
               "version": "[7.5.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             }
           },
           "imports": [

@@ -10,3 +10,6 @@ C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAcces
 C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\refint\DataAccess.Net.dll
 C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.pdb
 C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\ref\DataAccess.Net.dll
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\bin\Debug\net6.0\Common.dll
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\bin\Debug\net6.0\Common.pdb
+C:\Users\trung\RiderProjects\BE_092024\DataAccess.Net\obj\Debug\net6.0\DataAccess.Net.csproj.CopyComplete
