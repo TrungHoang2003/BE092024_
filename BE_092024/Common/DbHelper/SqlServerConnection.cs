@@ -5,10 +5,11 @@ namespace Common.DbHelper;
 
 public class SqlServerConnection: DbConnection<SqlConnection>
 {
-    SqlConnection _connection;
+    private SqlConnection _connection;
+    
     public override SqlConnection DbConnect()
     {
-        var connectionStr = "Server=Trung;Database=QuanLyKhachSan;Trusted_Connection=True";
+        var connectionStr = "Server=Trung;Database=BE092024;Trusted_Connection=True";
         _connection = new SqlConnection(connectionStr);
        
         if (_connection.State == ConnectionState.Closed)

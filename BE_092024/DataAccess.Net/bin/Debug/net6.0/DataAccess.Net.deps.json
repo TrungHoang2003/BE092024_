@@ -715,6 +715,8 @@
       },
       "Common/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.36",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "System.Data.SqlClient": "4.9.0"
         },
         "runtime": {

@@ -10,6 +10,7 @@
         "dependencies": {
           "DataAccess.Net": "1.0.0",
           "EPPlus": "7.5.1",
+          "Microsoft.EntityFrameworkCore": "6.0.36",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -751,6 +752,8 @@
       },
       "Common/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.36",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "System.Data.SqlClient": "4.9.0"
         },
         "runtime": {

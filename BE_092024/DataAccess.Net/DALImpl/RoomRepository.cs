@@ -1,17 +1,15 @@
 using System.Data;
 using System.Data.SqlClient;
-using Common.DbHelper;
 using DataAccess.Net.DAL;
 using DataAccess.Net.DataObject;
 using DataAccess.Net.DBContext;
-using Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal;
 using SqlServerConnection = Common.DbHelper.SqlServerConnection;
 
 namespace DataAccess.Net.DALImpl;
 
 public class RoomRepository: IRoomRepository
 {
-    private BE092024_DbContext _dbContext;
+    private readonly BE092024_DbContext _dbContext;
     private readonly List<Room> _rooms = new List<Room>();
 
     public RoomRepository(BE092024_DbContext dbContext)
@@ -26,7 +24,7 @@ public class RoomRepository: IRoomRepository
         {
             using var cmd = new SqlCommand($@"select * from Room where Id = '{id}'", conn);
             cmd.CommandType = CommandType.Text;
-            using var reader = cmd.ExecuteReader();
+            using var reader = cmd.ExecuteReader(); // reader(SqlDataReader)
             reader.Read();
             var room = new Room
             {
