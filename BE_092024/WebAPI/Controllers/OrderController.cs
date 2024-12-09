@@ -1,9 +1,7 @@
 using DataAccess.Net.Bussiness;
-using DataAccess.Net.DAL;
 using DataAccess.Net.DataObject;
-using DataAccess.Net.UnitOfWork;
+using DataAccess.Net.DTO;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace BE_092024.Controllers;
 
@@ -21,19 +19,27 @@ public class OrderController : Controller
 
 
     [HttpPost("CreateOrder")]
-    public async Task<ActionResult<Order>> CreateOrder([FromBody] Order order)
+    public async Task<ActionResult<Order>> CreateOrder([FromBody] OrderDTO orderDTO)
     {
         if(!ModelState.IsValid)
             return BadRequest(ModelState);
-        if (!order.OrderDetail.Any())
+        if (!orderDTO.OrderDetail.Any())
         {
             return BadRequest("Order must have at least one order detail");
         }
-
         try
         {
-            order.TotalAmount = order.OrderDetail.Sum(d=>d.Subtotal);
-            
+            var order = new Order()
+            {
+                CustomerName = orderDTO.CustomerName,
+                OrderDate = orderDTO.OrderDate,
+                Status = orderDTO.Status,
+                OrderDetail = orderDTO.OrderDetail.Select(o => new OrderDetail()
+                {
+                    ProductId = o.ProductId,
+                    Quantity = o.Quantity
+                }).ToList()
+            };
             await _orderService.CreateOrder(order);
             
             return Ok(order);

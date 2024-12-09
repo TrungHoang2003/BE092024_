@@ -11,10 +11,8 @@ public class Order
     [StringValidate]
     public String CustomerName{ get; set; }
     
-    [DateValidate]
     public DateTime OrderDate{ get; set; }
     
-    [NumberValidate]
     public Decimal TotalAmount{ get; set; }
     
     [StringValidate]

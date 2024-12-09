@@ -8,6 +8,5 @@ public interface IOrderService
    Task UpdateOrderStatus(int orderId, string status);
    Task DeleteOrder(int orderId);
    Task<Order> GetOrderById(int orderId);
-   
    Task<List<Order>> GetAllOrders();
 }

@@ -16,12 +16,16 @@ public class OrderService: IOrderService
     {
         foreach (var orderDetail in order.OrderDetail)
         {
-            var product = await _unitOfWork.Products.Search(orderDetail.ProducId);
+            var product = await _unitOfWork.Products.Search(orderDetail.ProductId);
             if(product == null)
                 throw new Exception("Product not found");
             
             if(product.Stock < orderDetail.Quantity)
                 throw new Exception("Product out of stock");
+            
+            orderDetail.ProductPrice = product.Price;
+            orderDetail.TotalAmount = product.Price * orderDetail.Quantity;
+            order.TotalAmount = orderDetail.TotalAmount;
             
             product.Stock -= orderDetail.Quantity; //Cập nhật tồn kho
             await _unitOfWork.Products.Update(product); //Cập nhật sản phẩm 

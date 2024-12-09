@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using Common.DbHelper;
 using DataAccess.Net.DAL;
 using DataAccess.Net.DBContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Net.DALImpl;
 
@@ -17,8 +18,9 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : cla
 
     public async Task<List<T>> GetAll()
     {
-        var result = new List<T>();
+        /*
         var conn = new SqlServerConnection().DbConnect();
+        var result = new List<T>();
         try
         {
             await using var cmd = new SqlCommand($"select *from [{typeof(T).Name}]", conn);
@@ -36,6 +38,9 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : cla
             throw new Exception(ex.Message);
         }
         return result;
+        */
+       
+        return await _dbContext.Set<T>().ToListAsync();
     }
 
     public async Task<T> Insert(T entity)
@@ -58,7 +63,7 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : cla
 
     public async Task<T> Search(int id)
     {
-        var result = new T();
+        /*var result = new T();
         var conn = new SqlServerConnection().DbConnect();
         try
         {
@@ -76,6 +81,9 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : cla
         {
             throw new Exception(e.Message);
         }
+        return result;*/
+        
+        var result = await _dbContext.Set<T>().FindAsync(id);
         return result;
     }
 }

@@ -5,7 +5,7 @@ namespace DataAccess.Net.UnitOfWork;
 
 public interface IUnitOfWork
 {
-    IOrderDetailRepository OrderDetailRepository { get; set; }
+    IOrderDetailRepository OrderDetail { get; set; }
     IProductRepository Products { get; set; }
     IOrderRepository Orders { get; set; }
     

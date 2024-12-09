@@ -16,7 +16,7 @@ public class RoomController : Controller
         _roomRepository = roomRepository;
     }
 
-    [HttpPost("AddRoom")]
+    /*[HttpPost("AddRoom")]
     public IActionResult AddRoom([FromBody] Room room)
     {
        _roomRepository.addRoomToDB(room); 
@@ -47,5 +47,5 @@ public class RoomController : Controller
     {
        _roomRepository.updateRoomDB(id, room); 
        return Ok();
-    }
+    }*/
 }

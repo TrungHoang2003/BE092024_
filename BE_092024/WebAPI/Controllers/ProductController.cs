@@ -1,6 +1,7 @@
 using DataAccess.Net.DAL;
 using DataAccess.Net.DataObject;
 using DataAccess.Net.UnitOfWork;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BE_092024.Controllers;
@@ -16,7 +17,8 @@ public class ProductController : Controller
         _unitOfWork = unitOfWork;
     }
 
-    [HttpGet("GetProducts")]
+    [Authorize]
+    [HttpGet("GetProducts/protected")]
     public async Task<IActionResult> GetProducts()
     { 
         var productList = await _unitOfWork.Products.GetAll();

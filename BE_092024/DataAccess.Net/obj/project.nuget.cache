@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QvuMv12kU1k=",
+  "dgSpecHash": "Vv6XhpwjiLQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\trung\\RiderProjects\\BE_092024\\DataAccess.Net\\DataAccess.Net.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\trung\\.nuget\\packages\\epplus\\7.5.1\\epplus.7.5.1.nupkg.sha512",
     "C:\\Users\\trung\\.nuget\\packages\\epplus.interfaces\\7.5.0\\epplus.interfaces.7.5.0.nupkg.sha512",
     "C:\\Users\\trung\\.nuget\\packages\\epplus.system.drawing\\7.5.0\\epplus.system.drawing.7.5.0.nupkg.sha512",
+    "C:\\Users\\trung\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.36\\microsoft.aspnetcore.authentication.jwtbearer.6.0.36.nupkg.sha512",
     "C:\\Users\\trung\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\trung\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "C:\\Users\\trung\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

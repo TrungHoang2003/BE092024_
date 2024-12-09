@@ -11,9 +11,7 @@ public class Product
     [StringValidate]
     public string? ProductName{get;set;}
     
-    [NumberValidate]
     public decimal Price{get;set;}
     
-    [NumberValidate]
     public int Stock{get;set;}
 }

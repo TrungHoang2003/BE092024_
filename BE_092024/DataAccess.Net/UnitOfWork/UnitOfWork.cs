@@ -5,16 +5,16 @@ namespace DataAccess.Net.UnitOfWork;
 
 public class UnitOfWork: IUnitOfWork
 {
-    public UnitOfWork(IOrderDetailRepository orderDetailRepository, IProductRepository products, IOrderRepository orders, BE092024_DbContext dbContext)
+    public UnitOfWork(IOrderDetailRepository orderDetail, IProductRepository products, IOrderRepository orders, BE092024_DbContext dbContext)
     {
-        OrderDetailRepository = orderDetailRepository;
+        OrderDetail = orderDetail;
         Products = products;
         Orders = orders;
         _dbContext = dbContext;
     }
 
     private readonly BE092024_DbContext _dbContext;
-    public IOrderDetailRepository OrderDetailRepository { get; set; }
+    public IOrderDetailRepository OrderDetail { get; set; }
     public IProductRepository Products { get; set; }
     public IOrderRepository Orders { get; set; }
     public async Task<int> SaveChangesAsync()
